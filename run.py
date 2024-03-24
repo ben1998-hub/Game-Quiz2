@@ -1,6 +1,6 @@
 from os import system, name  # import of os module
 import random  # for the use of randomising answers.
-from questions import questions # importing the questions from questions.py file for declutter.
+from question import questions
 
 qq = questions
 finished = []
