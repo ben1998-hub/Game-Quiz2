@@ -140,3 +140,42 @@ function that gives the user an option
     print("\n")
     option = input("Press enter to return to main menu.")
     main_menu()  # calls main menu
+    def main_menu():
+    """
+    a function to for the main menu
+    shuffle question randomly for future use of the quiz
+    displays the start, rules, exit options
+
+    """
+    global qq
+    global score
+    global q_num
+
+    score = 0
+    q_num = 0
+
+    random.shuffle(qq)
+
+    clear()
+    menu = ['Start', 'Rules', 'Exit']
+    score = 0
+    menustring = ""
+    for i, a in enumerate(menu):
+        iterator = indexes[i]
+        menustring += f"{iterator}. {a}\n"
+
+
+    print(menustring)
+
+    menuselect = input(f"Please select an option: ").upper()
+
+    if menuselect == "A":
+        run_quiz()
+    elif menuselect == "B":
+        show_rules()
+    elif menuselect == "C":
+        print("Goodbye!")
+        exit()
+    else:
+        main_menu()
+
