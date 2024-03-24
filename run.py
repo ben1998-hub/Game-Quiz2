@@ -5,12 +5,13 @@ from questions import questions # importing the questions from questions.py file
 qq = questions
 finished = []
 
-
 # indexes the questions from the questions file.
 total = len(qq)
 indexes = ['A', 'B', 'C', 'D']
 score = 0 
 q_num = 0
+
+
 def clear():
     """
     function to clear 
@@ -22,14 +23,14 @@ def clear():
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
+
+
 def check_answer(answers, correct, response):
-   
     """
     Function with if else statment to check
     if answer is correct or not according to the indexes
 
     """
-
     global score
     global q_num
 
@@ -55,7 +56,6 @@ def check_answer(answers, correct, response):
 
 def give_question(ques):
 
-
     """
     prints current score.
     it shuffles the answers randomly with random module
@@ -78,7 +78,8 @@ def give_question(ques):
     correct = ques["correct_answer"]
 
     print(question)
-astring = ""
+
+    astring = ""
     for i, a in enumerate(answers):
         iterator = indexes[i]
         astring += f"{iterator}. {a}\n"
@@ -103,6 +104,8 @@ def end_card():
     clear()
     print("\n🏆🏆🏆\n")
     print(f"You have finished the quiz!\nYour final score was {score}/{total}")
+
+
 def run_quiz():
     """
     function run the quiz and
@@ -128,7 +131,7 @@ def run_quiz():
 
 def show_rules():
     """
-function that gives the user an option
+    function that gives the user an option
     to view the rules of the quiz with print statments
     """
     clear()
@@ -140,7 +143,9 @@ function that gives the user an option
     print("\n")
     option = input("Press enter to return to main menu.")
     main_menu()  # calls main menu
-    def main_menu():
+
+
+def main_menu():
     """
     a function to for the main menu
     shuffle question randomly for future use of the quiz
@@ -164,7 +169,6 @@ function that gives the user an option
         iterator = indexes[i]
         menustring += f"{iterator}. {a}\n"
 
-
     print(menustring)
 
     menuselect = input(f"Please select an option: ").upper()
@@ -179,3 +183,5 @@ function that gives the user an option
     else:
         main_menu()
 
+
+main_menu()
