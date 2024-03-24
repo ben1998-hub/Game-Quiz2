@@ -78,4 +78,53 @@ def give_question(ques):
     correct = ques["correct_answer"]
 
     print(question)
+astring = ""
+    for i, a in enumerate(answers):
+        iterator = indexes[i]
+        astring += f"{iterator}. {a}\n"
 
+    print(astring)
+
+    response = input("Please enter the correct letter:\n").upper()
+
+    if response in indexes:
+        check_answer(answers, correct, response)
+    else:
+        clear()
+        print("Please enter a valid answer (A, B, C or D)")
+        input("Press enter to continue\n")
+
+
+def end_card():
+    """
+    end_card function to display to the user
+    their incremented score of the total answers
+    """
+    clear()
+    print("\n🏆🏆🏆\n")
+    print(f"You have finished the quiz!\nYour final score was {score}/{total}")
+def run_quiz():
+    """
+    function run the quiz and
+    once it iterates through all ten questions
+    it calls the end card function and displays
+    to the user to return to the main menu
+    """
+    global qq
+    global total
+    total = len(qq)
+    while len(qq) > 0:
+        q = qq[0]
+        give_question(q)
+
+    if len(qq) == 0:
+        qq = finished[::-1]
+
+        end_card()
+        print('\n')
+        input("Press enter to return to main menu.\n")
+        main_menu()
+
+
+def show_rules():
+    """
