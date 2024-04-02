@@ -44,14 +44,14 @@ Source: https://github.com/orgs/community/discussions/16925
 
 The features in this quiz menu selctor, multi choice question and rules explaing the game.
 
-![screenshot](documentation/pic4)
+![screenshot](documentation/pic4.png)
 
 
 
-![screenshot](documentation/pic3)
-!
+![screenshot](documentation/pic3.png)
 
-![screenshot](documentation/features/2)
+
+![screenshot](documentation/pic2.png2)
 
 
 
@@ -227,7 +227,6 @@ And most importantly mentor Tim!!
 ### Content
 
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 | Source | Location | Notes |
 | --- | --- | --- |
